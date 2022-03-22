@@ -38,6 +38,12 @@ public class Program2 {
         List<Department> listDep = departmentDao.findAll();
         listDep.forEach(System.out::println);
 
+        System.out.println("\n=== Test 5: findById department ===");
+        System.out.println("Enter department id for test: ");
+        int idDep = sc.nextInt();
+        Department department = departmentDao.findById(idDep);
+        System.out.println(department);
+
         sc.close();
     }
 }
